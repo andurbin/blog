@@ -14,7 +14,6 @@ import {
 	MAIN_PANEL_OVERLAPS_BANNER_HEIGHT,
 } from "../constants/constants";
 import Layout from "./Layout.astro";
-import Comments from "../components/Comments.astro"
 
 interface Props {
 	title?: string;
@@ -121,7 +120,6 @@ const mainPanelTop = siteConfig.banner.enable
 
         <!-- #toc needs to exist for Swup to work normally -->
         {!siteConfig.toc.enable && <div id="toc"></div>}
-    	<Comments/>
     </div>
 </div>
 </Layout>
