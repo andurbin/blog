@@ -82,3 +82,38 @@ This is a note with a custom title.
 > [!TIP]
 > The GitHub syntax is also supported.
 ```
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> B
+```
+
+```d2
+container: Docker {
+  icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+  style: {
+    stroke: deepskyblue
+    font-color: deepskyblue
+    fill: white
+  }
+  nginx: NGINX {
+    icon: https://icons.terrastruct.com/dev%2Fnginx.svg
+    style: {
+      stroke: green
+      font-color: green
+      stroke-dash: 3
+      fill: white
+    }
+    astro: Astro {
+      style: {
+        stroke: "#d841c1"
+        font-color: white
+        fill: "#75297f"
+      }
+    }
+  }
+}
+```
