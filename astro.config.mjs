@@ -17,8 +17,6 @@ import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
-import rehypeMermaid from 'rehype-mermaid';
-import astroD2 from 'astro-d2'
 
 import d2 from "astro-d2";
 
@@ -27,9 +25,7 @@ export default defineConfig({
     site: "https://fuwari.vercel.app/",
     base: "/",
     trailingSlash: "always",
-    integrations: [
-		astroD2(),
-		tailwind({
+    integrations: [tailwind({
         nesting: true,
 		}), swup({
         theme: false,
@@ -53,9 +49,6 @@ export default defineConfig({
         },
 		}), svelte(), sitemap(), d2()],
     markdown: {
-        syntaxHighlight: {
-            excludeLangs: ['mermaid'],
-        },
         remarkPlugins: [
             remarkMath,
             remarkReadingTime,
@@ -66,7 +59,6 @@ export default defineConfig({
             parseDirectiveNode,
         ],
         rehypePlugins: [
-            rehypeMermaid,
             rehypeKatex,
             rehypeSlug,
             [

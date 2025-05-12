@@ -83,13 +83,6 @@ This is a note with a custom title.
 > The GitHub syntax is also supported.
 ```
 
-```mermaid
-graph TD
-    A[Start] --> B{Is it working?}
-    B -->|Yes| C[Great!]
-    B -->|No| D[Debug]
-    D --> B
-```
 
 ```d2
 container: Docker {
