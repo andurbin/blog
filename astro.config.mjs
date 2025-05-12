@@ -47,7 +47,12 @@ export default defineConfig({
             "fa6-regular": ["*"],
             "fa6-solid": ["*"],
         },
-		}), svelte(), sitemap(), d2()],
+		}), svelte(), sitemap(), d2(
+			{
+      // Disable generating diagrams when deploying on Vercel.
+      skipGeneration: true,
+    }
+		)],
     markdown: {
         remarkPlugins: [
             remarkMath,
