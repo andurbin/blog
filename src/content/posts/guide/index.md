@@ -49,3 +49,17 @@ src/content/posts/
     ├── cover.png
     └── index.md
 ```
+
+test line
+
+
+```java title="/root/line-markers.js" del={2} ins={3-4} {6}"
+public class Hello1
+{
+   public static void Main()
+   {
+      System.Console.WriteLine("Hello, World!");
+      System.Console.WriteLine("Rock all night long!");
+   }
+}
+```

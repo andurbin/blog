@@ -20,6 +20,8 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 import d2 from "astro-d2";
 
+import expressiveCode from "astro-expressive-code";
+
 // https://astro.build/config
 export default defineConfig({
     site: "https://fuwari.vercel.app/",
@@ -27,7 +29,7 @@ export default defineConfig({
     trailingSlash: "always",
     integrations: [tailwind({
         nesting: true,
-		}), swup({
+        }), swup({
         theme: false,
         animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
         // the default value `transition-` cause transition delay
@@ -40,19 +42,19 @@ export default defineConfig({
         updateHead: true,
         updateBodyClass: false,
         globalInstance: true,
-		}), icon({
+        }), icon({
         include: {
             "preprocess: vitePreprocess(),": ["*"],
             "fa6-brands": ["*"],
             "fa6-regular": ["*"],
             "fa6-solid": ["*"],
         },
-		}), svelte(), sitemap(), d2(
-			{
+        }), svelte(), sitemap(), d2(
+            {
       // Disable generating diagrams when deploying on Vercel.
       skipGeneration: true,
     }
-		)],
+        ), expressiveCode()],
     markdown: {
         remarkPlugins: [
             remarkMath,

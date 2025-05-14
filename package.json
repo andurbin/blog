@@ -31,6 +31,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "astro": "5.7.12",
     "astro-d2": "^0.7.0",
+    "astro-expressive-code": "^0.41.2",
     "astro-icon": "^1.1.5",
     "hastscript": "^9.0.1",
     "katex": "^0.16.22",
